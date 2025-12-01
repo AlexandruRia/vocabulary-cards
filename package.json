@@ -9,6 +9,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@supabase/ssr": "^0.8.0",
+    "@supabase/supabase-js": "^2.86.0",
     "next": "16.0.5",
     "react": "19.2.0",
     "react-dom": "19.2.0"
@@ -21,6 +23,8 @@
     "eslint": "^9",
     "eslint-config-next": "16.0.5",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+     "tailwind-merge": "^3.3.0",
+     "clsx": "^2.1.1"
   }
 }
