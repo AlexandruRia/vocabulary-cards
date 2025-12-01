@@ -6,9 +6,8 @@ import { Word } from "@/types/word";
 export default function AddWord() {
     
       async function addNewWord(word: Word) {
-        const {wordDb } = await supabase.from("Word").insert(word)
+        await supabase.from("Word").insert(word)
         return
-    
       }
 
     return (
