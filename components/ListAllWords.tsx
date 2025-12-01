@@ -1,17 +1,16 @@
-"use client"
 
-import { supabase } from "@/lib/supabase";
+import { Word } from "@/types/word";
 
+interface ListAllWordsProps {
+    word: Word[] | null
+}
 
-
-export async function ListAllWords() {
-   const { data, error } = await supabase
-    .from("Word")
-    .select("*");
+export async function ListAllWords({word}:ListAllWordsProps) {
+  
 
   return(
      <ul>
-        {data?.map((item) => (
+        {word?.map((item) => (
           <li key={item.id}>{item.name} - {item.transaltion}</li>
         ))}
       </ul>
