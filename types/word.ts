@@ -1,7 +1,7 @@
 export interface Word {
     id?: string;
     name?: string;
-    transaltion?: string;
-    exampleSentence?: string;
+    translation?: string;
+    example?: string;
     description?: string;
 }

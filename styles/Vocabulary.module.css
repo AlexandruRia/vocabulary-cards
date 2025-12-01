@@ -1,0 +1,57 @@
+/* Container */
+.vocabularyPage {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+/* Heading */
+.vocabularyPage h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Word list */
+.wordList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.wordItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f5f5f5;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.7rem;
+  transition: background 0.2s;
+}
+
+.wordItem:hover {
+  background: #e0e0e0;
+}
+
+/* Word text */
+.wordText {
+  font-size: 1.1rem;
+}
+
+/* Delete button */
+.deleteButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0.2rem;
+  transition: transform 0.1s;
+}
+
+.deleteButton:hover {
+  transform: scale(1.1);
+}
