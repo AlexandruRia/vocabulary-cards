@@ -53,3 +53,19 @@
   border: none;
   cursor: pointer;
 }
+
+.addNewWordContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.addNewWord {
+    padding:8px 12px;
+    background:#0070f3;
+    border: "none";
+    color: "white";
+    border-radius: 6px;
+    cursor: "pointer";
+    color: white;
+}

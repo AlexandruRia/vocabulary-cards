@@ -15,8 +15,9 @@ export default async function Vocabulary() {
   return (
     <div className={styles.vocabularyPage}>
       <h1>Vocabulary Page</h1>
-      <ListAllWords word={data}></ListAllWords>
       <Modal></Modal>
+      <ListAllWords word={data}></ListAllWords>
+      
     </div>
     )
 }

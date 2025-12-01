@@ -45,6 +45,8 @@
 .deleteButton {
   background: transparent;
   border: none;
+  position: absolute;
+  top:-100px;
   cursor: pointer;
   display: flex;
   align-items: center;

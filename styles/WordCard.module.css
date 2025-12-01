@@ -1,0 +1,163 @@
+.card,
+.hiddenCard {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.hiddenCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  align-items: flex-start;
+}
+
+/* Text styles */
+.translation {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.titleRow {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-weight: 500;
+  color: #666;
+  margin-left: 0.3rem;
+}
+
+.description {
+  color: #444;
+  margin-bottom: 0.75rem;
+}
+
+.example {
+  color: #555;
+  font-style: italic;
+  border-left: 4px solid #ddd;
+  padding-left: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Input styles */
+.input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #4f8bff;
+  box-shadow: 0 0 0 2px rgba(79, 139, 255, 0.2);
+}
+
+/* Buttons */
+.buttonRow {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.btn {
+  padding: 0.55rem 1.1rem;
+  font-size: 0.95rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.btnPrimary {
+  background: #4f8bff;
+  color: white;
+}
+
+.btnPrimary:hover {
+  background: #3b73d7;
+}
+
+.btnSecondary {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.btnSecondary:hover {
+  background: #e4e4e4;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* "Conceal" button inside revealed card */
+.concealBtn {
+  margin-top: 0.75rem;
+  padding: 0.55rem 1rem;
+  border-radius: 0.5rem;
+  background: #eee;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.concealBtn:hover {
+  background: #e1e1e1;
+}
+
+.success {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1rem;
+  color: #2ecc71;
+  font-weight: 600;
+  opacity: 0;
+  animation: fadeIn 0.4s forwards;
+}
+
+.checkmark {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #2ecc71;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+}
+
+/* --- ERROR SHAKE ANIMATION --- */
+.errorShake {
+  animation: shake 0.35s ease;
+  border-color: #ff4d4d !important;
+}
+
+/* Shake animation */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-5px); }
+  40% { transform: translateX(5px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+
+/* Fade-in for success text */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}

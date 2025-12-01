@@ -1,0 +1,53 @@
+.cardTestGeneral {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardTestPage {
+    background-color: rgb(98, 170, 233);
+    width: 30%;
+    margin: auto;
+    min-height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 15px;
+}
+
+.cardTestPage h1 {
+   font-size: 32;
+}
+
+.amountQueestionContainer {
+   color: rgb(239, 240, 243);
+   display: flex;
+   flex-direction: column;
+
+}
+
+.amountQueestionContainer input {
+    color: black;
+   background-color: white;
+   border: 1px solid gray;
+   border-radius: 5px;
+}
+
+
+.generateButton {
+   background-color: rgb(38, 38, 255);
+   border: 1px solid gray;
+   border-radius: 5px;
+   color: white;
+   padding: .4rem;
+   display: flex;
+   gap: 1rem;
+   align-items: center;
+}
+
+@media screen {
+    
+}

@@ -13,8 +13,6 @@ interface ModalProps {
 
 export default function Modal() {
  
-  
-    
     const [open, setOpen] = useState<boolean>(false);
 
     const [name, setName] = useState<string>("");
@@ -38,15 +36,10 @@ export default function Modal() {
 
 
   if (!open) return (
-     <button onClick={() => setOpen(true)} style={{
-          padding: "8px 12px",
-          background: "#0070f3",
-          position:"absolute",
-          border: "none",
-          color: "white",
-          borderRadius: "6px",
-          cursor: "pointer",
-        }} type="button">Add a new Word</button>
+    <div className={styles.addNewWordContainer}>
+        <button className={styles.addNewWord} onClick={() => setOpen(true)} type="button">Add a new Word</button>
+    </div>
+     
 
   );
 
