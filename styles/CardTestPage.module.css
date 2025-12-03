@@ -1,53 +1,95 @@
+/* General page wrapper */
 .cardTestGeneral {
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f3f4f6; /* light gray background */
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
 }
 
+/* Inner card container */
 .cardTestPage {
-    background-color: rgb(98, 170, 233);
-    width: 30%;
-    margin: auto;
-    min-height: 45%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    border-radius: 15px;
+  background: #ffffff;
+  padding: 32px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.cardTestPage:hover {
+  transform: translateY(-4px);
 }
 
 .cardTestPage h1 {
-   font-size: 32;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #111827;
 }
 
+/* Amount Question Card */
 .amountQueestionContainer {
-   color: rgb(239, 240, 243);
-   display: flex;
-   flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
 
+.amountQueestionContainer p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #374151;
 }
 
 .amountQueestionContainer input {
-    color: black;
-   background-color: white;
-   border: 1px solid gray;
-   border-radius: 5px;
+  padding: 12px 16px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  transition: all 0.2s ease;
 }
 
+.amountQueestionContainer input:focus {
+  border-color: #4f46e5; /* Indigo */
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
 
+/* Generate Button */
 .generateButton {
-   background-color: rgb(38, 38, 255);
-   border: 1px solid gray;
-   border-radius: 5px;
-   color: white;
-   padding: .4rem;
-   display: flex;
-   gap: 1rem;
-   align-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  background: #4f46e5; /* Indigo */
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 8px rgba(79, 70, 229, 0.2);
 }
 
-@media screen {
+.generateButton:hover {
+  background: #4338ca;
+  box-shadow: 0 6px 12px rgba(79, 70, 229, 0.3);
+}
+
+.generateButton:active {
+  transform: scale(0.98);
+}
+
+@media only screen and (max-width: 600px) {
+   .cardTestPage {
+       width: 80%;
+   }
     
 }

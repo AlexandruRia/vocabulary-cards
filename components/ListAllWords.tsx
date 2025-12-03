@@ -1,19 +1,43 @@
+"use client"
 
 import { Word } from "@/types/word";
 import { DeleteRowButton } from "./DeleteRowButton";
 import styles from "../styles/Vocabulary.module.css";
+import { SearchBar } from "./SearchBar";
+import { useEffect, useState } from "react";
 
 
-interface ListAllWordsProps {
-    word: Word[] | null
-}
+export function ListAllWords() {
 
-export async function ListAllWords({word}:ListAllWordsProps) {
-  
+    const [wordsArr, setWordArr] = useState<Word[]>([])
+    const [ searchQuery, setSearchQuery] = useState('')
+
+     const searchEndointRes = async (searchValue: string) => {
+        
+        fetch(`/api/search?q=${searchValue}`)
+            .then((res) => 
+                (res.json()
+                    .then(
+                        res2 => {
+                            setSearchQuery(searchValue)
+                            setWordArr(res2)
+                        }
+                    )
+                )
+            )
+    }
+    
+    useEffect(() => {
+        searchEndointRes('')
+    }, [])
+    
+
 
   return(
+    <div>
+        <SearchBar words={searchEndointRes}></SearchBar>
       <ul className={styles.wordList}>
-      {word?.map((item) => (
+      {wordsArr?.map((item) => (
         <li key={item.id} className={styles.wordItem}>
           <span className={styles.wordText}>
             {item.name} - {item.translation}
@@ -22,5 +46,7 @@ export async function ListAllWords({word}:ListAllWordsProps) {
         </li>
       ))}
     </ul>
+    </div>
+   
   )
 }
