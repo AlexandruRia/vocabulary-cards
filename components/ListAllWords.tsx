@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 export function ListAllWords() {
 
     const [wordsArr, setWordArr] = useState<Word[]>([])
-    const [ searchQuery, setSearchQuery] = useState('')
+    // const [ searchQuery, setSearchQuery] = useState('')
 
      const searchEndointRes = async (searchValue: string) => {
         
@@ -19,7 +19,7 @@ export function ListAllWords() {
                 (res.json()
                     .then(
                         res2 => {
-                            setSearchQuery(searchValue)
+                            // setSearchQuery(searchValue)
                             setWordArr(res2)
                         }
                     )

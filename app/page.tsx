@@ -1,7 +1,9 @@
-import Navbar from "@/components/Navbar";
+import { HomePage } from "@/components/HomePage";
+
 
 export default function Home() {
   return (
-    <div>{process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY}</div>
-  );
+      <HomePage></HomePage>
+  )
+
 }

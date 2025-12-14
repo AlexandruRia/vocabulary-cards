@@ -62,12 +62,12 @@ export default function Modal() {
 
         <div className={styles.field}>
           <p className={styles.label}>Example Sentence (Optional)</p>
-          <input value={description} onChange={e => setDescription(e.target.value)} type="text" className={styles.input} />
+          <input value={example} onChange={e => setExample(e.target.value)} type="text" className={styles.input} />
         </div>
 
         <div className={styles.field}>
           <p className={styles.label}>Description (Optional)</p>
-          <input value={example} onChange={e => setExample(e.target.value)} type="text" className={styles.input} />
+          <input value={description} onChange={e => setDescription(e.target.value)} type="text" className={styles.input} />
         </div>
 
         <button type="submit" onClick={() => addNewWord() } className={styles.submitButton}>

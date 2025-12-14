@@ -16,7 +16,8 @@ export async function GET(request: Request) {
       const { data, error } = await supabase
     .from("Word")
     .select("*")
-    .ilike("name", `%${query}%`);
+    .ilike("name", `%${query}%`)
+    .limit(10);
 
   if (error) return NextResponse.json({ error: error.message }, { status: 400 });
 

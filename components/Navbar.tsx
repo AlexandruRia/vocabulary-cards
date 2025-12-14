@@ -3,7 +3,11 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <nav style={styles.nav}>
-      <div style={styles.logo}>My App</div>
+      <div style={styles.logo}>
+        <Link href="/">
+            My App
+        </Link>
+    </div>
 
       <ul style={styles.navLinks}>
         <li>
