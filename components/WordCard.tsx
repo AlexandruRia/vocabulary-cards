@@ -3,6 +3,7 @@
 import { Word } from "@/types/word"
 import styles from "../styles/WordCard.module.css";
 import { useState } from "react";
+import { useSpeech } from "react-text-to-speech";
 
 
 interface WordCardProps {
@@ -14,6 +15,23 @@ export default function WordCard({word, hidden}: WordCardProps) {
 
     const [hiddenCard, setHiddenCard] = useState(hidden)
     const [translateInput, setTranslateInput] = useState("")
+
+    const text = word.example;
+
+  const {
+    start,
+    stop,
+    speechStatus,
+    Text,
+  } = useSpeech({
+    text,
+    lang: "ro-RO",
+    rate: 0.85,        // slower for learning
+    pitch: 1.0,        // neutral pitch
+    volume: 1.0,
+    highlightText: true,
+  });                // optional volume (0–1)
+  
 
       const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
   const [shake, setShake] = useState(false);
@@ -89,6 +107,8 @@ export default function WordCard({word, hidden}: WordCardProps) {
       <button className={styles.concealBtn} onClick={() => setHiddenCard(true)}>
         Conceal
       </button>
+
+      <button onClick={start}>Play</button>
     </div>
   );
 }

@@ -16,7 +16,7 @@ export function HomePage() {
   },[])
 
 return (
-<main className="container">
+<main className="main-container">
 <div className="card">
 <h1 className="title">📚 Vocabulary Cards</h1>
 <p className="subtitle">Total words in your vocabulary</p>
@@ -25,7 +25,7 @@ return (
 
 
 <style jsx>{`
-.container {
+.main-container {
 min-height: 100vh;
 display: flex;
 align-items: center;
